@@ -5,7 +5,7 @@
 
 //case 1
 let intValue0= 0; //global variable
-console.log(intValue0); //10
+console.log(intValue0); //0
 
 //since their is only one scope here that is global therefore it is global variable.
 
@@ -15,7 +15,7 @@ console.log(intValue0); //10
 //case 2
 let intValue1 = 1;    //global variable(since variable is defined out of the scope)
 {
-  console.log(intValue1); //2
+  console.log(intValue1); //1
 }
 //scope: the functional bracket(i.e;{}) is scope
 //global variable can be access outside as well as inside the scope.
@@ -26,7 +26,7 @@ let intValue1 = 1;    //global variable(since variable is defined out of the sco
 {
   //console.log(intValue2); //case 3: error- cannot access 'intValue2' before initialization
   let intValue2= 2;      //local variable
-  console.log(intValue2);//5  
+  console.log(intValue2);//2
   }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35,7 +35,7 @@ let intValue1 = 1;    //global variable(since variable is defined out of the sco
 {
 //console.log(intValue3); // error: cannot access 'intValue3' before initialization
 let intValue3= 3;      //local variable
-console.log(intValue3);//4  (within the scope u can access the data after defining it)
+console.log(intValue3);//3   (within the scope u can access the data after defining it)
 }
 
 
@@ -49,7 +49,7 @@ console.log(intValue3);//4  (within the scope u can access the data after defini
 {
     //console.log(intValue4);     //error: cannot access 'intValue' before initialization
     let intValue4= 4;            // local variable(since defined within the scope)
-    console.log(intValue4);
+    console.log(intValue4);      //4
 }
 //console.log(intValue4);         //case 5: error- undefined
 
