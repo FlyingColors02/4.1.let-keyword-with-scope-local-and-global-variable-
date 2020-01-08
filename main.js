@@ -78,25 +78,39 @@ console.log(intValue5); //5
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*IMPORTANT*/
 
 let intValue6;   //declared
 {
-  intValue6=6.1; //defined
-  console.log(intValue6); //6.1
+  
+  console.log(intValue6); //undefined (without error: it gives undefined output but execute the further code)
+  intValue6=6; //defined
+  console.log(intValue6); //6
 }
-console.log(intValue6); //6.1 (no error because their is already defined value for intValue6(global variable))
-intValue6=6.2;
+console.log(intValue6); //6
+
+//just because we have declared the variable and now it is global variable it won't give exception else undefined output
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let intValue7;   //declared
+{
+  intValue7=7.1; //defined
+  console.log(intValue7); //7.1
+}
+console.log(intValue7); //7.1 (no error because their is already defined value for intValue6(global variable))
+intValue7=6.2;
 
 
 ////////////////////////////////////////////////////////
 
- let intValue7= 7;  //global variable(since defined outside scope)
+ let intValue8= 8;  //global variable(since defined outside scope)
  {
-   //console.log(intValue7);  //cannot access before initialization
-   let intValue7 = 7.3;         //local variable(defined within scope)
-   console.log(intValue7); //7.3
+   //console.log(intValue8);  //cannot access before initialization
+   let intValue8 = 8.3;         //local variable(defined within scope)
+   console.log(intValue8); //8.3
  }
- console.log(intValue7); //7
+ console.log(intValue8); //8
 
 
  //here both the variable are having same name(bad practice) 
